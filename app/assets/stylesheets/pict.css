@@ -4,33 +4,43 @@
 
 .side-bar {
   background-color: #FFFFFF;
-  width: 400px;
+  width: 300px;
   height: 100vh;
 }
 
 .side-bar-head {
-  height: 100px;
+  height: 80px;
   padding: 0 20px;
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name a{
+  font-size: 24px;
+  color: #FAFAFA;
+  text-decoration: none;
 }
 
 .side-bar-main {
-  background-color: #83e8f0;
-  height: calc(100vh - 100px);
+  background-color: #70e98e;
+  height: calc(100vh - 80px);
   padding: 0 20px;
 }
 
 .main-pict {
-  background-color: #51be75a9;
-  width: calc(100vw - 400px);
+  background-color: #97deeba9;
+  width: calc(100vw - 300px);
 }
 
 .search-head {
-  height: 100px;
+  height: 80px;
   padding: 0 30px;
 }
 
 .pictures {
-  background-color: #d8e68c;
-  height: calc(100vh - 100px);
+  background-color: #b7e6a9e3;
+  height: calc(100vh - 80px);
   padding: 46px 30px 0;
 }
