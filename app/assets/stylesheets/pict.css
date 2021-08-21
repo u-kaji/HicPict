@@ -27,6 +27,7 @@
   background-color: #70e98e;
   height: calc(100vh - 80px);
   padding: 0 20px;
+  overflow: scroll;
 }
 
 .main-pict {
