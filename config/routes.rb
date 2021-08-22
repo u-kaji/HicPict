@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'picts/index'
   root to: "picts#index"
   resources :users, only: [:edit, :update, :destroy]
+  resources :picts, only: [:index, :new]
 end
