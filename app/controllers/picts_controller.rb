@@ -20,6 +20,7 @@ class PictsController < ApplicationController
   end
 
   def show
+    
   end
 
   def edit
@@ -38,8 +39,6 @@ class PictsController < ApplicationController
     redirect_to root_path
   end
     
-
-
 
   private
 
