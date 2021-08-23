@@ -1,0 +1,2 @@
+class HicsController < ApplicationController
+end

@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   get 'picts/index'
   root to: "picts#index"
   resources :users, only: [:edit, :update, :destroy]
-  resources :picts
+  resources :picts do
+    resources :hics
+  end
 end
