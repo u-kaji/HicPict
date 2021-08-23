@@ -26,7 +26,7 @@
       <li class='list'>
 
       
-        <%= link_to picts_path do %>
+        <%= link_to pict_path(pict.id) do %>
         <div class='item-img-content'>
           <%= image_tag pict.image.variant(resize: '300x300'), class: "item-img" %>
 
