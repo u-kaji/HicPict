@@ -1,0 +1,25 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @pict.title %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @pict.image.variant(resize: '600x600') ,class:"item-box-img" %>
+    </div>
+
+    <% if user_signed_in? %> 
+        
+          <%if current_user == @pict.user %>
+            <%= link_to "投稿の編集", edit_pict_path, method: :get, class: "item-red-btn" %>
+            <p class="or-text">or</p>
+            <%= link_to "削除", pict_path, method: :delete, class:"item-destroy" %>
+          <% else %>
+            <%= link_to "俳句を詠む・査定する", "#" ,class:"item-red-btn"%>
+          <% end %>
+        
+    <% end %>
+
+    <div>
+    <%= link_to "top page", root_path, method: :get, class: "item-red-btn" %>
+    </div>
+

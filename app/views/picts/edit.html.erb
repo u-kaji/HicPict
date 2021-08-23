@@ -1,0 +1,41 @@
+<div class="items-sell-main">
+    <h2 class="items-sell-title">載せたい写真を選択</h2>
+    <%= form_with model:@pict, url:pict_path, method: :patch, local: true do |f| %>
+
+    <%# 投稿画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        投稿画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /投稿画像 %>
+    <%# タイトルと写真の説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"タイトル（必須 20文字まで)", maxlength:"20" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          写真の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"写真の説明（必須 100文字まで）（おおまかな撮影場所や撮影時期など。想像力を膨らませるため簡単にでOKです！）" ,rows:"7" ,maxlength:"100" %>
+      </div>
+    </div>
+    <%# /タイトルと写真の説明 %>
+    <%# 下部ボタン %>
+      <div class="sell-btn-contents">
+        <%= f.submit "更新する" , class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    <%# /下部ボタン %>
+  <% end %>

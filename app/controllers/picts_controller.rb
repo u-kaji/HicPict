@@ -1,5 +1,6 @@
 class PictsController < ApplicationController
   before_action :authenticate_user!, except:[:index, :show]
+  before_action :set_pict, only:[:show, :edit, :update, :destroy]
 
   def index
     @picts = Pict.all.order(id:"desc")
@@ -18,6 +19,24 @@ class PictsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @pict.update(pict_params)
+      redirect_to pict_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @pict.destroy
+    redirect_to root_path
+  end
     
 
 
@@ -27,4 +46,9 @@ class PictsController < ApplicationController
   def pict_params
     params.require(:pict).permit(:title, :comment, :image).merge(user_id: current_user.id)
   end
+
+  def set_pict
+    @pict = Pict.find(params[:id])
+  end
+
 end
