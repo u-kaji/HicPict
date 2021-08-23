@@ -1,0 +1,2 @@
+class Hic < ApplicationRecord
+end

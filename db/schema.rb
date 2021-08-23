@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_22_074500) do
+ActiveRecord::Schema.define(version: 2021_08_23_031500) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(version: 2021_08_22_074500) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "hics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "hic", null: false
+    t.string "kigo", null: false
+    t.bigint "user_id", null: false
+    t.bigint "pict_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pict_id"], name: "index_hics_on_pict_id"
+    t.index ["user_id"], name: "index_hics_on_user_id"
   end
 
   create_table "picts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,5 +67,7 @@ ActiveRecord::Schema.define(version: 2021_08_22_074500) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "hics", "picts"
+  add_foreign_key "hics", "users"
   add_foreign_key "picts", "users"
 end
