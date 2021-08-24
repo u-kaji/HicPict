@@ -18,19 +18,6 @@
 
 <div id="list">
 </div>
-<%# if @pict.hic.present?%>
-  <% @hics.each do |hic| %>
-    <div class="post">
-    <div class="post-date">
-      投稿日時：<%= hic.created_at %>
-    </div>
-    <div class="post-content">
-      <%= hic.hic %>
-    </div>
-    <div class="post-content">
-      <%= hic.kigo %>
-    </div>
-  </div>
-  <% end %>
-<%# end %>
+
+<%=link_to 'もどる', pict_path(@pict), class:"back-btn" %>
 

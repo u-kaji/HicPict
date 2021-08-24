@@ -20,7 +20,7 @@ class PictsController < ApplicationController
   end
 
   def show
-    
+    @hics = Hic.all
   end
 
   def edit
