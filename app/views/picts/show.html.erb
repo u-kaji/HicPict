@@ -13,11 +13,11 @@
     <% if user_signed_in? %> 
         
           <%if current_user == @pict.user %>
-            <%= link_to "投稿の編集", edit_pict_path, method: :get, class: "item-red-btn" %>
+            <%= link_to "俳句を詠む", new_pict_hic_path(pict_id: @pict.id), method: :get, class:"item-red-btn"%>
+          <% else %>
+            <%= link_to "写真の編集", edit_pict_path, method: :get, class: "item-red-btn" %>
             <p class="or-text">or</p>
             <%= link_to "削除", pict_path, method: :delete, class:"item-destroy" %>
-          <% else %>
-            <%= link_to "俳句を詠む", new_pict_hic_path(pict_id: @pict.id), method: :get, class:"item-red-btn"%>
           <% end %>
         
     <% end %>
@@ -28,14 +28,18 @@
 
   <% @hics.each do |hic| %>
     <div class="post">
-    <div class="post-date">
-      投稿日時：<%= hic.created_at %>
+    <div class ="hic-iroiro">
+      <div class="post-date">
+        投稿日時：<%= hic.created_at %>
+      </div>
+      <div class="post-content">
+        <%= hic.hic %>
+      </div>
+      <div class="post-content">
+        <%= hic.kigo %>
+      </div>
+      <div class="post-content">
+        <%= hic.user.nickname %>
+      </div>
     </div>
-    <div class="post-content">
-      <%= hic.hic %>
-    </div>
-    <div class="post-content">
-      <%= hic.kigo %>
-    </div>
-  </div>
   <% end %>

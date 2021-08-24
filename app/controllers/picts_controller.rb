@@ -20,7 +20,7 @@ class PictsController < ApplicationController
   end
 
   def show
-    @hics = Hic.all
+    @hics = Hic.where(pict_id: @pict.id)
   end
 
   def edit
