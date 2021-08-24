@@ -17,7 +17,7 @@
             <p class="or-text">or</p>
             <%= link_to "削除", pict_path, method: :delete, class:"item-destroy" %>
           <% else %>
-            <%= link_to "俳句を詠む", pict_hics_path(pict_id: @pict.id), method: :post, class:"item-red-btn"%>
+            <%= link_to "俳句を詠む", new_pict_hic_path(pict_id: @pict.id), method: :get, class:"item-red-btn"%>
           <% end %>
         
     <% end %>
@@ -26,3 +26,16 @@
     <%= link_to "top page", root_path, method: :get, class: "item-red-btn" %>
     </div>
 
+  <% @hics.each do |hic| %>
+    <div class="post">
+    <div class="post-date">
+      投稿日時：<%= hic.created_at %>
+    </div>
+    <div class="post-content">
+      <%= hic.hic %>
+    </div>
+    <div class="post-content">
+      <%= hic.kigo %>
+    </div>
+  </div>
+  <% end %>
