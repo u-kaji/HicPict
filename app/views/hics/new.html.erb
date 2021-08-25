@@ -2,7 +2,9 @@
   <div class="item-box">
     <h2 class="name">
       <%= @pict.title %>
+      <%= "投稿者 #{@pict.user.nickname}" %>
     </h2>
+    
     <div class="item-img-content">
       <%= image_tag @pict.image.variant(resize: '600x600') ,class:"item-box-img" %>
     </div>

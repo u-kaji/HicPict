@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources   :users, only: [:edit, :update, :destroy]
   resources   :picts do
     resources :hics, only: [:new, :create] do
-      resources :eval, only: [:new]
+      resources :evals, only: [:new, :create]
     end
   end
 end
