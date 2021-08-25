@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :picts
   has_many :hics
+  has_many :evals
 
 
 end

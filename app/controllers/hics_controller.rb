@@ -4,7 +4,6 @@ class HicsController < ApplicationController
 
   def new
     @hic = Hic.new
-    @hics = Hic.all
   end
 
   def create

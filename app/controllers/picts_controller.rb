@@ -20,7 +20,8 @@ class PictsController < ApplicationController
   end
 
   def show
-    @hics = Hic.all
+    @hic = Hic.new
+    @hics = Hic.where(pict_id: @pict.id)
   end
 
   def edit
@@ -42,12 +43,13 @@ class PictsController < ApplicationController
 
   private
 
-  def pict_params
-    params.require(:pict).permit(:title, :comment, :image).merge(user_id: current_user.id)
-  end
-
   def set_pict
     @pict = Pict.find(params[:id])
   end
 
+  def pict_params
+    params.require(:pict).permit(:title, :comment, :image).merge(user_id: current_user.id)
+  end
+
+  
 end

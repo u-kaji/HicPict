@@ -1,7 +1,8 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%= @pict.title %>
+      <%= @pict.title %><br>
+      <%= "投稿者 #{@pict.user.nickname}" %>
     </h2>
     <div class="item-img-content">
       <%= image_tag @pict.image.variant(resize: '600x600') ,class:"item-box-img" %>
@@ -13,8 +14,7 @@
     <% if user_signed_in? %> 
         
           <%if current_user == @pict.user %>
-            <%= link_to "投稿の編集", edit_pict_path, method: :get, class: "item-red-btn" %>
-            <p class="or-text">or</p>
+            <%= link_to "写真の編集", edit_pict_path, method: :get, class: "item-red-btn" %>
             <%= link_to "削除", pict_path, method: :delete, class:"item-destroy" %>
           <% else %>
             <%= link_to "俳句を詠む", new_pict_hic_path(pict_id: @pict.id), method: :get, class:"item-red-btn"%>
@@ -23,19 +23,28 @@
     <% end %>
 
     <div>
-    <%= link_to "top page", root_path, method: :get, class: "item-red-btn" %>
+    <%= link_to "もどる", root_path, method: :get, class: "item-red-btn" %>
     </div>
 
   <% @hics.each do |hic| %>
     <div class="post">
-    <div class="post-date">
-      投稿日時：<%= hic.created_at %>
+    <div class ="hic-iroiro">
+      <div class="post-date">
+        投稿日時：<%= hic.created_at %>
+      </div>
+      <div class="post-content">
+        <%= hic.hic %>
+      </div>
+      <div class="post-content">
+        <%= hic.kigo %>
+      </div>
+      <div class="post-content">
+        <%= hic.user.nickname %>
+      </div>
+      <% unless current_user.id == hic.id %>
+      <div class="post-content">
+        <%= link_to "俳句の品評", new_pict_hic_eval_path(pict_id:@pict.id, hic_id:@pict.hics.ids),method: :get %>
+      </div>
+      <% end %>
     </div>
-    <div class="post-content">
-      <%= hic.hic %>
-    </div>
-    <div class="post-content">
-      <%= hic.kigo %>
-    </div>
-  </div>
   <% end %>
