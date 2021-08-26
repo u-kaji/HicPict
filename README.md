@@ -1,24 +1,55 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
+|Column              |Type       |Options                  |
+------------------------------------------------------------
+|nickname            |string     |null: false              |
+|email               |string     |null: false, unique: true|
+|encrypted_password  |string     |null: false              |
 
-Things you may want to cover:
+### Association
+- has_many :picts
+- has_many :hics
+- has_many :evals
 
-* Ruby version
+## picts テーブル
+|Column              |Type       |Options                       |
+----------------------------------------------------------------
+|title               |string     |null: false                   |
+|comment             |text       |null: false                   |
+|user                |references |null: false, foreign_key: true|
 
-* System dependencies
+### Association
+- belongs_to :user
+_ has_many :hics
 
-* Configuration
+## hics テーブル
+|Column              |Type       |Options                       |
+----------------------------------------------------------------
+|hic                 |string     |null: false                   |
+|kigo                |string     |null: false                   |
+|user                |references |null: false, foreign_key: true|
+|pict                |references |null: false, foreign_key: true|
 
-* Database creation
+### Association
+- belongs_to :user
+_ belongs_to :pict
+_ has_many :evals
 
-* Database initialization
+## evals テーブル
+|Column              |Type       |Options                       |
+----------------------------------------------------------------
+|review              |test       |null: false                   |
+|scene               |integer    |null: false                   |
+|rhythm              |integer    |null: false                   |
+|kigo                |integer    |null: false                   |
+|tech                |integer    |null: false                   |
+|original            |integer    |null: false                   |
+|user                |references |null: false, foreign_key: true|
+|hic                 |references |null: false, foreign_key: true|
 
-* How to run the test suite
+### Association
+- belongs_to :user
+_ belongs_to :hic
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
