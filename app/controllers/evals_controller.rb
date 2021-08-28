@@ -1,10 +1,6 @@
 class EvalsController < ApplicationController
 
 
-  def index
-    @evals = Evals.all
-  end
-
   def new
     @hic = Hic.find(params[:hic_id])
     @pict = Pict.find(params[:pict_id])
@@ -26,7 +22,7 @@ class EvalsController < ApplicationController
   private
 
   def eval_params
-    params.require(:eval).permit(:scene, :rhythm, :kigo, :tech, :original, :review).merge(user_id: current_user.id)
+    params.require(:eval).permit(:scene, :rhythm, :kigo, :tech, :original, :review).merge(user_id: current_user.id, pict_id:@pict.id, hic_id:@hic.id)
   end
 
 end
