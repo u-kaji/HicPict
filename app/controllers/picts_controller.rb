@@ -11,8 +11,8 @@ class PictsController < ApplicationController
   end
 
   def create
-    @pict = Pict.new(pict_params)
-    if @pict.save
+    @pict2 = Pict.new(pict_params)
+    if @pict2.save
       redirect_to root_path
     else
       render :new

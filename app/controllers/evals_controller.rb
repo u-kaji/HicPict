@@ -12,6 +12,8 @@ class EvalsController < ApplicationController
   end
 
   def create
+    @hic = Hic.find(params[:hic_id])
+    @pict = Pict.find(params[:pict_id])
     @eval = Eval.new(eval_params)
     if @eval.save
       redirect_to root_path

@@ -29,53 +29,54 @@
 <%= form_with(model:[@pict,@hic,@eval], local: true) do |form| %>
   <p>情景が浮かぶか?</p>
   <%= form.radio_button :scene, :scene %>
-  <%= form.label :scene, "１点", {value: :scene, style: "display: inline-block;"} %>
+  <%= form.label :scene, "１点", {value: 1, style: "display: inline-block;"} %>
   <%= form.radio_button :scene, :scene %>
-  <%= form.label :scene, "２点", {value: :scene, style: "display: inline-block;"} %>
+  <%= form.label :scene, "２点", {value: 2, style: "display: inline-block;"} %>
   <%= form.radio_button :scene, :scene %>
-  <%= form.label :scene, "３点", {value: :scene, style: "display: inline-block;"} %>
+  <%= form.label :scene, "３点", {value: 3, style: "display: inline-block;"} %>
   <%= form.radio_button :scene, :scene %>
-  <%= form.label :scene, "４点", {value: :scene, style: "display: inline-block;"} %>
-
+  <%= form.label :scene, "４点", {value: 4, style: "display: inline-block;"} %>
+  
   <p>リズムはよいか?</p>
   <%= form.radio_button :rhythm, :rhythm %>
-  <%= form.label :rhythm, "１点", {value: :rhythm, style: "display: inline-block;"} %>
+  <%= form.label :rhythm, "１点", {value: 1, style: "display: inline-block;"} %>
   <%= form.radio_button :rhythm, :rhythm %>
-  <%= form.label :rhythm, "２点", {value: :rhythm, style: "display: inline-block;"} %>
+  <%= form.label :rhythm, "２点", {value: 2, style: "display: inline-block;"} %>
   <%= form.radio_button :rhythm, :rhythm %>
-  <%= form.label :rhythm, "３点", {value: :rhythm, style: "display: inline-block;"} %>
+  <%= form.label :rhythm, "３点", {value: 3, style: "display: inline-block;"} %>
   <%= form.radio_button :rhythm, :rhythm %>
-  <%= form.label :rhythm, "４点", {value: :rhythm, style: "display: inline-block;"} %>
-
+  <%= form.label :rhythm, "４点", {value: 4, style: "display: inline-block;"} %>
+  
 <p>季語（主役）が引き立っているか?</p>
   <%= form.radio_button :kigo, :kigo %>
-  <%= form.label :kigo, "１点", {value: :kigo, style: "display: inline-block;"} %>
+  <%= form.label :kigo, "１点", {value: 1, style: "display: inline-block;"} %>
   <%= form.radio_button :kigo, :kigo %>
-  <%= form.label :kigo, "２点", {value: :kigo, style: "display: inline-block;"} %>
+  <%= form.label :kigo, "２点", {value: 2, style: "display: inline-block;"} %>
   <%= form.radio_button :kigo, :kigo %>
-  <%= form.label :kigo, "３点", {value: :kigo, style: "display: inline-block;"} %>
+  <%= form.label :kigo, "３点", {value: 3, style: "display: inline-block;"} %>
   <%= form.radio_button :kigo, :kigo %>
-  <%= form.label :kigo, "４点", {value: :kigo, style: "display: inline-block;"} %>
-
+  <%= form.label :kigo, "４点", {value: 4, style: "display: inline-block;"} %>
+  
   <p>文法に誤りはないか?</p>
   <%= form.radio_button :tech, :tech %>
-  <%= form.label :tech, "１点", {value: :tech, style: "display: inline-block;"} %>
+  <%= form.label :tech, "１点", {value: 1, style: "display: inline-block;"} %>
   <%= form.radio_button :tech, :tech %>
-  <%= form.label :tech, "２点", {value: :tech, style: "display: inline-block;"} %>
+  <%= form.label :tech, "２点", {value: 2, style: "display: inline-block;"} %>
   <%= form.radio_button :tech, :tech %>
-  <%= form.label :tech, "３点", {value: :tech, style: "display: inline-block;"} %>
+  <%= form.label :tech, "３点", {value: 3, style: "display: inline-block;"} %>
   <%= form.radio_button :tech, :tech %>
-  <%= form.label :tech, "４点", {value: :tech, style: "display: inline-block;"} %>
-
+  <%= form.label :tech, "４点", {value: 4, style: "display: inline-block;"} %>
+  
   <p>独創性はあるか?</p>
   <%= form.radio_button :original, :original %>
-  <%= form.label :original, "１点", {value: :original, style: "display: inline-block;"} %>
+  <%= form.label :original, "１点", {value: 1, style: "display: inline-block;"} %>
   <%= form.radio_button :original, :original %>
-  <%= form.label :original, "２点", {value: :original, style: "display: inline-block;"} %>
+  <%= form.label :original, "２点", {value: 2, style: "display: inline-block;"} %>
   <%= form.radio_button :original, :original %>
-  <%= form.label :original, "３点", {value: :original, style: "display: inline-block;"} %>
+  <%= form.label :original, "３点", {value: 3, style: "display: inline-block;"} %>
   <%= form.radio_button :original, :original %>
-  <%= form.label :original, "４点", {value: :original, style: "display: inline-block;"} %>
+  <%= form.label :original, "４点", {value: 4, style: "display: inline-block;"} %>
+
   <div>
   <%= form.text_area :review, placeholder:"コメントはこちらにご記入下さい", id: "review", size:"30x3" %>
   </div>
@@ -83,4 +84,8 @@
     <%= form.submit '送信' %>
   </div>
 
+<% end %>
+
+<%= form_with(model:[@pict,@hic,@eval], local: true) do |form| %>
+<%= form.radio_button :scene, 1 %>1点 <%= form.radio_button :scene, 2 %>2点
 <% end %>
