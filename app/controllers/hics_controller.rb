@@ -20,7 +20,7 @@ class HicsController < ApplicationController
   private
 
   def set_pict
-    @pict = Pict.find(params[:pict_id])
+    @pict = Pict.find(params[:_id])
   end
 
   def hic_params

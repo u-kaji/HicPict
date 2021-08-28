@@ -10,6 +10,7 @@ class CreateEvals < ActiveRecord::Migration[6.0]
 
       t.references  :user,     null: false, foreign_key: true
       t.references  :hic,      null: false, foreign_key: true
+      t.references  :pict,     null: false, foreign_key: true
 
       t.timestamps
     end
