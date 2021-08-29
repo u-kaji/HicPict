@@ -3,7 +3,7 @@ class HicsController < ApplicationController
 
 
   def new
-    @hic = Hic.find.new
+    @hic = Hic.new
   end
 
   def create
