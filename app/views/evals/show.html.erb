@@ -22,3 +22,49 @@
         <%= @hic.user.nickname %>
       </div>
     </div>
+
+    <canvas id="myChart"></canvas>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ["scene", "rhythm", "kigo", "tech","original"],
+    datasets: 
+    [
+      <% @scenesum=@evals.sum(:scene) %>
+      <% @scenecount=@evals.count(:scene)%>
+
+      <% @rhythmsum=@evals.sum(:rhythm) %>
+      <% @rhythmcount=@evals.count(:rhythm)%>
+
+      <% @kigosum=@evals.sum(:kigo) %>
+      <% @kigocount=@evals.count(:kigo)%>
+
+      <% @techsum=@evals.sum(:tech) %>
+      <% @techcount=@evals.count(:tech)%>
+
+      <% @originalsum=@evals.sum(:original) %>
+      <% @originalcount=@evals.count(:original)%>
+
+
+
+
+        {
+        label: '品評結果',
+        backgroundColor: 'rgba(102,255,129,0.2)',
+        borderColor: 'rgba(122,255,129,0.2)',
+        data: [<%= @scenesum.to_f/@scenecount %>, <%= @rhythmsum.to_f/@rhythmcount %>, <%= @kigosum.to_f/@kigocount %>, <%= @techsum.to_f/@techcount%>, <%= @originalsum.to_f/@originalcount %>]
+        },
+    ]
+  },
+  options: {
+      scale: {
+          ticks: {
+              suggestedMin: 1,
+              suggestedMax: 4
+          }
+      }
+  }
+});
+</script>
