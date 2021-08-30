@@ -1,7 +1,7 @@
 class EvalsController < ApplicationController
 
-before_action :set_pict, only: [:new, :create]
-before_action :set_hic, only: [:new, :create]
+before_action :set_pict, only: [:new, :create, :show]
+before_action :set_hic, only: [:new, :create, :show]
 
   def new
     @eval = Eval.new
@@ -15,6 +15,10 @@ before_action :set_hic, only: [:new, :create]
       render :new
     end
   end
+
+  def show
+  end
+
 
 
   private

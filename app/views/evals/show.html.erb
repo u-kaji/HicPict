@@ -1,0 +1,24 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @pict.title %>
+      <%= "投稿者 #{@pict.user.nickname}" %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @pict.image.variant(resize: '600x600') ,class:"item-box-img" %>
+    </div>
+
+    <div class ="hic-iroiro">
+      <div class="post-date">
+        投稿日時：<%= @hic.created_at %>
+      </div>
+      <div class="post-content">
+        <%= @hic.hic %>
+      </div>
+      <div class="post-content">
+        <%= @hic.kigo %>
+      </div>
+      <div class="post-content">
+        <%= @hic.user.nickname %>
+      </div>
+    </div>

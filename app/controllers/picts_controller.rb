@@ -20,7 +20,7 @@ class PictsController < ApplicationController
   end
 
   def show
-    @hic = Hic.find(params[:id])
+    @hic = Hic.find_by(params[:hic_id])
     @hics = Hic.where(pict_id: @pict.id)
   end
 
