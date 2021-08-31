@@ -4,6 +4,9 @@ class PictsController < ApplicationController
 
   def index
     @picts = Pict.all.order(id:"desc")
+    @q = Pict.ransack(params[:q])
+    @titles = @q.result(distinct: true)
+    @comments = @q.result(distinct: true)
   end
 
   def new
