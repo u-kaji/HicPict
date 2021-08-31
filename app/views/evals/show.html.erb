@@ -68,3 +68,12 @@ var myChart = new Chart(ctx, {
   }
 });
 </script>
+
+  <% @evals.each do |eval| %>
+    <div class="post">
+    <div class ="hic-iroiro">
+      <div class="post-date">
+        レビュー：<%= eval.review %>
+      </div>
+      </div>
+  <% end%>
