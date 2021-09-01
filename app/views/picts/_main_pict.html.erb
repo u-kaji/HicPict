@@ -5,6 +5,15 @@
       <%= link_to current_user.nickname, edit_user_path(current_user) %>
     </div>
   </div>
+
+  <div class ="center-header">
+  <%= search_form_for @q do |f| %>
+    <%= f.label :title_or_comment, "写真の検索" %>
+    <%= f.search_field :title_or_comment_cont %>
+    <%= f.submit "検索" %>
+  <% end %>
+  </div>
+
   <div class="right-header">
     <div class="header-button">
       <%= link_to "写真を投稿する", new_pict_path %>

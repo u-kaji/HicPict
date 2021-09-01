@@ -3,7 +3,9 @@ class PictsController < ApplicationController
   before_action :set_pict, only:[:show, :edit, :update, :destroy]
 
   def index
-    @picts = Pict.all.order(id:"desc")
+    @q = Pict.ransack(params[:q])
+    @picts = @q.result(distinct: true).order(id:"desc")
+
   end
 
   def new
