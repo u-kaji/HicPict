@@ -1,3 +1,4 @@
+<%= render partial: "shared/header" %>
 <div class="items-sell-main">
     <h2 class="items-sell-title">載せたい写真を選択</h2>
     <%= form_with model:@pict, url:pict_path, method: :patch, local: true do |f| %>
