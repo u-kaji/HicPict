@@ -29,16 +29,12 @@
     </div>
     <ul class='item-lists'>
 
-
       <% if @picts.present? %>
       <% @picts.each do|pict| %>
       <li class='list'>
-
-      
         <%= link_to pict_path(pict.id) do %>
         <div class='item-img-content'>
           <%= image_tag pict.image.variant(resize: '300x300'), class: "item-img" %>
-
         </div>
         <div class='item-info'>
           <h3 class='item-name'>

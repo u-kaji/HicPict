@@ -65,3 +65,7 @@
   padding: 46px 30px 0;
   overflow: scroll;
 }
+
+.list{
+  display: inline-block;
+}
