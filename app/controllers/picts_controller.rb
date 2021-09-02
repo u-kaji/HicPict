@@ -5,7 +5,6 @@ class PictsController < ApplicationController
   def index
     @q = Pict.ransack(params[:q])
     @picts = @q.result(distinct: true).order(id:"desc")
-
   end
 
   def new
@@ -24,6 +23,7 @@ class PictsController < ApplicationController
   def show
     @hic = Hic.find_by(params[:hic_id])
     @hics = Hic.where(pict_id: @pict.id)
+    @like = Like.new
   end
 
   def edit
