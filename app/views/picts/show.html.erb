@@ -8,6 +8,15 @@
     <div class="item-img-content">
       <%= image_tag @pict.image.variant(resize: '600x600') ,class:"item-box-img" %>
     </div>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'><%=@pict.likes.count%></span>
+              <% if current_user.already_liked?(@pict)%>
+                <%= button_to "いいねを取り消す", pict_like_path(@pict), method: :delete %>
+              <% else %>
+                <%= button_to "いいね", pict_likes_path(@pict) %>
+              <% end %>
+            </div>
     <h4 class="name">
       <%= @pict.comment %>
     </h4>
