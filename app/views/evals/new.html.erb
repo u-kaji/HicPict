@@ -36,7 +36,7 @@
 <p>独創性はあるか</p>
 <%= form.select :original, [["１点",1],["２点",2],["３点",3],["４点",4]], prompt:"点数を選択してください", class: "original_point" %>
 <div>
-  <%= form.text_area :review, placeholder:"コメントはこちらにご記入下さい", id: "review", size:"30x3" %>
+  <%= form.text_area :review, placeholder:"コメントはこちらにご記入下さい(50文字以内)", id: "review", size:"30x3" %>
 </div>
   <div>
     <%= form.submit '送信' %>
