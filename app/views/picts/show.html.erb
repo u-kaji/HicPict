@@ -51,13 +51,13 @@
       <div class="post-content">
         <%= hic.user.nickname %>
       </div>
-      <% if current_user.id == @hic.id %>
+      <% if current_user.id == @hic.user.id %>
       <div class="post-content">
         <%= link_to "品評の結果", pict_hic_eval_path(pict_id:@pict.id, hic_id: @hic.id),method: :get %>
       </div>
       <% else %>
-      <div class="post-content2">
-        <%= link_to "俳句の品評", new_pict_hic_eval_path(pict_id:@pict.id, hic_id: hic.id),method: :get %>
+      <div class="post-content">
+        <%= link_to "俳句の品評", new_pict_hic_eval_path(pict_id:@pict.id, hic_id: @hic.id),method: :get %>
       </div>
       <% end %>
     </div>
