@@ -4,7 +4,7 @@
 
 # 概要実装機能
 写真と俳句のSNS  
-100個の"いいね"より1個の"5・7・5"をコンセプトに作成したアプリケーションです。  
+**100個の"いいね"より1個の"5・7・5"をコンセプト**に作成したアプリケーションです。  
 カメラが趣味の方が写真をアップして  
 俳句が趣味の方が写真に対して俳句を詠むアプリとなっております。  
 俳句は品評が可能であり、「情景」「音律」「季語」「技術」「独創」の5項目から評価されます。  
@@ -12,7 +12,7 @@
 # 制作背景
 写真をUPするSNSはいろいろありますが、  
 俳句のSNSは少ないことに気がつきました。  
-最近は俳句番組の視聴率も高く、人気になりつつあります。  
+最近は俳句番組の視聴率も高く、人気が高まっています。  
 写真を撮る人もただ、いいねやコメントをもらうのではなく、  
 俳句を詠んでもらうという新しい感覚を味わえる、  
 そんなSNSを作ってみたいと思い作成しました。  
@@ -29,12 +29,20 @@
 - gem:devise使用
 
 # 本番環境（デプロイ先とテストアカウントとID）
-- GitHub:
-- デプロイ先:
-- テストアカウント:Email; /Password;
+- GitHub: https://github.com/u-kaji/HicPict
+- デプロイ先: https://hic-819-pict.herokuapp.com/
+- ユーザー認証: user; admin / password; 9999
+- テストアカウント:Email; sample@test /Password; 819test
 
 # DEM0
+### トップ画面
+[![Image from Gyazo](https://i.gyazo.com/78f4c1cdc7d11d09702f30f46767a31f.png)](https://gyazo.com/78f4c1cdc7d11d09702f30f46767a31f)  
+### 俳句投稿・一覧ページ
+[![Image from Gyazo](https://i.gyazo.com/7c837f7a4b47308d96fa83273ac75612.png)](https://gyazo.com/7c837f7a4b47308d96fa83273ac75612)
+### 俳句品評ページ
 
+### 俳句品評結果・レビューページ
+[![Image from Gyazo](https://i.gyazo.com/3d33e33fc1b0bbfea9358cc5da761968.png)](https://gyazo.com/3d33e33fc1b0bbfea9358cc5da761968)
 # 工夫したポイント
 
 # 使用技術
