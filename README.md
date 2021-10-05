@@ -29,12 +29,20 @@
 - gem:devise使用
 
 # 本番環境（デプロイ先とテストアカウントとID）
-- GitHub:
-- デプロイ先:
-- テストアカウント:Email; /Password;
+- GitHub: https://github.com/u-kaji/HicPict
+- デプロイ先: https://hic-819-pict.herokuapp.com/
+- ユーザー認証: user; admin / password; 9999
+- テストアカウント:Email; sample@test /Password; 819test
 
 # DEM0
+### トップ画面
+[![Image from Gyazo](https://i.gyazo.com/78f4c1cdc7d11d09702f30f46767a31f.png)](https://gyazo.com/78f4c1cdc7d11d09702f30f46767a31f)  
+### 俳句投稿・一覧ページ
+[![Image from Gyazo](https://i.gyazo.com/7c837f7a4b47308d96fa83273ac75612.png)](https://gyazo.com/7c837f7a4b47308d96fa83273ac75612)
+### 俳句品評ページ
 
+### 俳句品評結果・レビューページ
+[![Image from Gyazo](https://i.gyazo.com/3d33e33fc1b0bbfea9358cc5da761968.png)](https://gyazo.com/3d33e33fc1b0bbfea9358cc5da761968)
 # 工夫したポイント
 
 # 使用技術
