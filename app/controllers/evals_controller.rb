@@ -17,7 +17,7 @@ before_action :set_hic, only: [:new, :create, :show]
   end
 
   def show
-    @evals = Eval.where(hic_id:hic.id)
+    @evals = Eval.where(hic_id:@hic.id)
   end
 
 
