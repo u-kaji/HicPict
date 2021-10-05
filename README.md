@@ -37,10 +37,12 @@
 # DEM0
 ### トップ画面
 [![Image from Gyazo](https://i.gyazo.com/78f4c1cdc7d11d09702f30f46767a31f.png)](https://gyazo.com/78f4c1cdc7d11d09702f30f46767a31f)  
-### 俳句投稿・一覧ページ
+### 俳句一覧ページ
 [![Image from Gyazo](https://i.gyazo.com/7c837f7a4b47308d96fa83273ac75612.png)](https://gyazo.com/7c837f7a4b47308d96fa83273ac75612)
+### 俳句投稿ページ  
+[![Image from Gyazo](https://i.gyazo.com/344e161f1b8bc43af938a668a1f5a674.png)](https://gyazo.com/344e161f1b8bc43af938a668a1f5a674)
 ### 俳句品評ページ
-
+[![Image from Gyazo](https://i.gyazo.com/0fabdb180a23fff99d24ea5e096cefd0.png)](https://gyazo.com/0fabdb180a23fff99d24ea5e096cefd0)
 ### 俳句品評結果・レビューページ
 [![Image from Gyazo](https://i.gyazo.com/3d33e33fc1b0bbfea9358cc5da761968.png)](https://gyazo.com/3d33e33fc1b0bbfea9358cc5da761968)
 # 工夫したポイント
