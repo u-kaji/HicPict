@@ -53,7 +53,7 @@
       </div>
       <% if current_user.id == @hic.id %>
       <div class="post-content">
-        <%= link_to "品評の結果", pict_hic_eval_path(pict_id:@pict.id, hic_id: hic.id),method: :get %>
+        <%= link_to "品評の結果", pict_hic_eval_path(pict_id:@pict.id, hic_id: @hic.id),method: :get %>
       </div>
       <% else %>
       <div class="post-content">
