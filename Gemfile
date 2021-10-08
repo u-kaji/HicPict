@@ -67,3 +67,4 @@ gem 'ransack'
 gem 'sqlite3', group: [:development, :test]
 gem "aws-sdk-s3", require: false
 
+gem 'rmagick'
