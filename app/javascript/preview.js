@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
+  
   if ( document.getElementById('item-image')){
     const ImageList = document.getElementById('image-list');
-    const THUMBNAIL_MAX_WIDTH = 500;
-    const THUMBNAIL_MAX_HEIGHT = 500;
 
+    
     //選択した画像を表示する関数
     const createImageHTML = (blob) => {
       //画像を表示する為のdiv要素生成
