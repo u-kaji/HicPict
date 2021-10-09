@@ -10,9 +10,9 @@ class HicsController < ApplicationController
     @pict = Pict.find(params[:pict_id])
     @hic = Hic.new(hic_params)
     if @hic.save
-      redirect_to root_path
+      redirect_to pict_path
     else
-      render :create
+      render :new
     end
   end
 
