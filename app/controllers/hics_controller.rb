@@ -12,7 +12,7 @@ class HicsController < ApplicationController
     if @hic.save
       redirect_to pict_path
     else
-      render :new
+      render :create
     end
   end
 
